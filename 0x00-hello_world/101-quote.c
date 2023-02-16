@@ -1,16 +1,16 @@
-#include <stdio.h>
-#include <unistd.h>
+#include<unistd.h>
 
 /**
- * main - Projet c
+ * main - Entry point
  *
- * Description : this program print a msg without using puts or printf
+ * Description: print a quote using write function
  *
- * Return 0 (Seccuss)
+ * Return: This time we return an error 1.
  */
 
 int main(void)
 {
-	write("and that piece of art is useful\" - Dora Korpar, 2015-10-19 \n");
+	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	write(1, quo, 59);
 	return (1);
 }
