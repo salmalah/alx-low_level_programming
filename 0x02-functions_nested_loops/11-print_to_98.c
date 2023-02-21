@@ -8,25 +8,29 @@
  */
 void print_to_98(int n)
 {
-	int i;
+	int counter;
 	
-	if (n == 98)
+	if (n <= 98)
 	{
-		printf("%d \n", n);
-	}
-	else if (n >= 98)
-	{
-		for (; n >= 98; n--)
+		for(counter = n; counter <= 98; counter++)
 		{
-			printf("%d \n", n);
+			printf("%d", n);
+			if (n == 98)
+				continue;
 			printf(", ");
 		}
+		printf("\n");
 	}
-	else 
+	else
 	{
-		for (; count < 98; n++)
-		printf("%d", n);
-		printf(", ");
+		for(counter = n; counter >= 98; counter--)
+		{
+			printf("%d \n", counter);
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
 	}
 
 }
