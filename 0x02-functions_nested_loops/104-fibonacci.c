@@ -10,7 +10,7 @@ int main(void)
 
 	int i;
 
-	for (i = 3; i <= 98; i++)
+	for (i = 3; i <= 96; i++)
 	{
 		s = t0 + t1;
 		if (i != 96)
