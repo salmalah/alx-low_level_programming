@@ -10,10 +10,10 @@ int main(void)
 
 	int i;
 
-	for (i = 1; i <= 98; i++)
+	for (i = 1; i <= 93; i++)
 	{
 		s = t0 + t1;
-		if (i != 98)
+		if (i != 93)
 		{
 			printf("%lu, ", s);
 		}
