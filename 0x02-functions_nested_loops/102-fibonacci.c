@@ -18,11 +18,11 @@ int main(void)
 	{
 		if (count == 50)
 		{
-			printf("%lu \n", next);
+			printf("%lu, ", next);
 		}
 		else
 		{
-			 printf("%lu \n", next);
+			 printf("%lu, ", next);
 		}
 
 		first = second;
