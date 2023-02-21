@@ -1,13 +1,13 @@
 # 0x02. C - Functions, nested loops
 ## Resources
 ### Read or watch:
-A [Nested while loops](https://www.youtube.com/watch?v=Z3iGeQ1gIss)
-A [C - Functions](https://www.tutorialspoint.com/cprogramming/c_functions.htm)
-A [Learning to Program in C (Part 06)](https://www.youtube.com/watch?v=qMlnFwYdqIw)
-A [What is the purpose of a function prototype?](https://www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/)
-A [C - Header Files ](https://www.tutorialspoint.com/cprogramming/c_header_files.htm)
+ [Nested while loops](https://www.youtube.com/watch?v=Z3iGeQ1gIss)
+ [C - Functions](https://www.tutorialspoint.com/cprogramming/c_functions.htm)
+ [Learning to Program in C (Part 06)](https://www.youtube.com/watch?v=qMlnFwYdqIw)
+ [What is the purpose of a function prototype?](https://www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/)
+ [C - Header Files ](https://www.tutorialspoint.com/cprogramming/c_header_files.htm)
 ## Learning Objectives
-At the end of this project, you are expected to be able to A[ explain to anyone](https://fs.blog/feynman-learning-technique/?fbclid=IwAR2K5_BGPVo0QjJXkOIIqNsqcXK4lTskPWJvA0asKQIGtCPWaQBdKmj1Ztg),**without the help of Google:**
+At the end of this project, you are expected to be able to [ explain to anyone](https://fs.blog/feynman-learning-technique/?fbclid=IwAR2K5_BGPVo0QjJXkOIIqNsqcXK4lTskPWJvA0asKQIGtCPWaQBdKmj1Ztg),**without the help of Google:**
 ### General
 * What are nested loops and how to use them
 * What is a function and how do you use functions
@@ -22,7 +22,7 @@ At the end of this project, you are expected to be able to A[ explain to anyone]
 * All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options<span style="color: red;"> -Wall -Werror -Wextra -pedantic -std=gnu89</span>
 * All your files should end with a new line
 * A<span style="color: red;"> README.md </span>file, at the root of the folder of the project is mandatory
-* Your code should use the<span style="color: red;"> Betty</span> style. It will be checked using A[betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl) and A[ betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl)
+* Your code should use the<span style="color: red;"> Betty</span> style. It will be checked using [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl) and [ betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl)
 * You are not allowed to use global variables
 * No more than 5 functions per file
 * ou are not allowed to use the standard library. Any use of functions like<span style="color: red;"> printf</span>,<span style="color: red;"> puts</span>, etc… is forbidden
