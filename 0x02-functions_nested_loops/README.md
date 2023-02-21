@@ -3,10 +3,10 @@
 ### Read or watch:
 * [Nested while loops](https://www.youtube.com/watch?v=Z3iGeQ1gIss)
 * [C - Functions](https://www.tutorialspoint.com/cprogramming/c_functions.htm)
-* [Learning to Program in C (Part 06)](https://www.youtube.com/watch?v=qMlnFwYdqIw)
+* [Learning to Program in C (Part 06)](https://www.youtube.com/watch?v=qMlnFwYdqIw)__(stop at 14:00)__
 * [What is the purpose of a function prototype?](https://www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/)
  [C - Header Files ](https://www.tutorialspoint.com/cprogramming/c_header_files.htm)
-## Learning Objectives
+## Learning Objectives __(stop before the “Once-Only Headers” paragraph)__
 At the end of this project, you are expected to be able to [ explain to anyone](https://fs.blog/feynman-learning-technique/?fbclid=IwAR2K5_BGPVo0QjJXkOIIqNsqcXK4lTskPWJvA0asKQIGtCPWaQBdKmj1Ztg),**without the help of Google:**
 ### General
 * What are nested loops and how to use them
