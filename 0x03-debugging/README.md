@@ -3,7 +3,9 @@
 ### Read or watch:
 * [Debugging] (https://en.wikipedia.org/wiki/Debugging)
 * [Rubber Duck Debugging] (https://www.thoughtfulcode.com/rubber-duck-debugging-psychology/)
+
 Debugging is the process of finding and fixing errors in software that prevents it from running correctly. As you become a more advanced programmer and an industry engineer, you will learn how to use debugging tools such as gdb or built-in tools that IDEs have. However, it’s important to understand the concepts and processes of debugging manually.
+
 ![This is an image](https://pbs.twimg.com/media/FXBTXWwX0AAE4FY.png)
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
