@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - Entry piont
- * Description: It a program that prints the numbers from 1 to 100
+ * main - Check description
+ * Description: It the fizz buzz program
  * Return: Always 0
  */
 
