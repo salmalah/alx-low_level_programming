@@ -1,0 +1,41 @@
+# 0x04. C - More functions, more nested loops
+## Resources
+### Read or watch:
+* [Nested while loops](https://www.youtube.com/watch?v=Z3iGeQ1gIss)
+* [C - Functions](https://www.tutorialspoint.com/cprogramming/c_functions.htm)
+* [Learning to Program in C (Part 06)](https://www.youtube.com/watch?v=qMlnFwYdqIw)*(stop at 14:00)*
+* [What is the purpose of a function prototype?](https://www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/)
+ [C - Header Files ](https://www.tutorialspoint.com/cprogramming/c_header_files.htm) *(stop before the “Once-Only Headers” paragraph)*
+## Learning Objectives_
+At the end of this project, you are expected to be able to [ explain to anyone](https://fs.blog/feynman-learning-technique/?fbclid=IwAR2K5_BGPVo0QjJXkOIIqNsqcXK4lTskPWJvA0asKQIGtCPWaQBdKmj1Ztg),**without the help of Google:**
+### General
+* What are nested loops and how to use them
+* What is a function and how do you use functions
+* What is the difference between a declaration and a definition of a function
+* What is a prototype
+* Scope of variables
+* What are the <span style="color: red;"> gcc </span>flags <span style="color: red;">-Wall -Werror -pedantic -Wextra -std=gnu89 </span>
+* What are header files and how to to use them with <span style="color: red;"> #include </span>
+## Copyright - Plagiarism
+* You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
+* You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
+* You are not allowed to publish any content of this project.
+* Any form of plagiarism is strictly forbidden and will result in removal from the program.
+
+## Requirements
+### General
+* Allowed editors:<span style="color: red;"> vi</span>,<span style="color: red;"> vim</span>, <span style="color: red;"> emacs</span>
+* All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options<span style="color: red;"> -Wall -Werror -Wextra -pedantic -std=gnu89</span>
+* All your files should end with a new line
+* A<span style="color: red;"> README.md </span>file, at the root of the folder of the project is mandatory
+* Your code should use the<span style="color: red;"> Betty</span> style. It will be checked using [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl) and [ betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl)
+* You are not allowed to use global variables
+* No more than 5 functions per file
+* ou are not allowed to use the standard library. Any use of functions like<span style="color: red;"> printf</span>,<span style="color: red;"> puts</span>, etc… is forbidden
+* You are allowed to use _putchar
+* You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
+*  In the following examples, the<span style="color: red;"> main.c</span> files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own<span style="color: red;"> main.c</span> files at compilation. Our main.c files might be different from the one shown in the examples
+* he prototypes of all your functions and the prototype of the function _putchar should be included in your header file called <span style="color: red;"> main.h </span>
+* Don’t forget to push your header file
+## More Info
+You do not have to understand the call by reference (address), stack, static variables, recursions or arrays, yet.
