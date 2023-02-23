@@ -6,7 +6,7 @@
  * @b : input number
  * Return: 0 if seccussful else 1
  */
-int mult(int a, int b)
+int mul(int a, int b)
 {
 	return (a * b);
 }

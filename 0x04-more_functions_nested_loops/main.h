@@ -5,7 +5,7 @@
 int _isupper(int c);
 int _putchar(char c);
 int _isdigit(int c);
-int mult(int a, int b);
+int mul(int a, int b);
 void print_numbers(void);
 void print_nost_numbers(void);
 void print_numbers(void);
