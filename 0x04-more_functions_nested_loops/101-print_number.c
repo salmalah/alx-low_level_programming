@@ -1,19 +1,27 @@
 #include "main.h"
+
 /**
- * print_number - Check description
- * Description: It a function that prints an integer
- * @n: input integer
- * Return: 0 Always
+ * print_number - check the code
+ *
+ * @n: a given number
+ *
+ * Return: Always 0.
  */
 void print_number(int n)
 {
-	if (n == 0)
-		_putchar('0');
-	else if (n < 0)
+	unsigned int num = n;
+
+	/*first check if its negative*/
+	if (n < 0)
 	{
 		_putchar('-');
-		_putchar(n + '0');
+		num = -num;
 	}
-	else
-		_putchar(n + '0');
+
+	/*print the first few digits*/
+	if ((num / 10) > 0)
+		print_number(num / 10);
+
+	/*print the last digit*/
+	_putchar((num % 10) + 48);
 }
