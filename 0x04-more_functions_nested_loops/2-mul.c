@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * mult - Check description
+ * mul - Check description
  * Description: It a function that multiplies two integers.
  * @a : input number
  * @b : input number
