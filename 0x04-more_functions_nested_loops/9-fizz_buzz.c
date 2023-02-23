@@ -2,6 +2,7 @@
 #include "main.h"
 /**
  * main - Entry piont
+ * Description: It a program that prints the numbers from 1 to 100
  * Return: Always 0
  */
 
