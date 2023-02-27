@@ -10,10 +10,19 @@ int _atoi(char *s)
 	unsigned int num = 0;
 	int n = strlen(s);
 	int i;
+	int sign;
 
 	for (i = 0; i < n; i++)
 	{
-		num = num * 10 + (s[i] - 48);
+		if (s[0] == '-')
+			sign = -1;
+		if(sign == -1)
+		{
+			 num = num * 10 + (s[i] - 48);
+			 num *= -1;
+		}
+		else 
+			 num = num * 10 + (s[i] - 48);
 	}
 	return (num);
 }
