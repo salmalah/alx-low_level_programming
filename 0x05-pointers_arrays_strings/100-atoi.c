@@ -16,7 +16,7 @@ int _atoi(char *s)
 		sign = -1;
 		i++;
 	}
-	for (i; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		num = num * 10 + (s[i] - 48);
 	}
