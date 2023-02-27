@@ -9,8 +9,9 @@ int _atoi(char *s)
 {
 	unsigned int num = 0;
 	int n = strlen(s);
+	int i;
 
-	for (int i = 0; i < n; i++)
+	for (i = 0; i < n; i++)
 	{
 		num = num * 10 + (s[i] - 48);
 	}
