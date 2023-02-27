@@ -14,9 +14,7 @@ int _atoi(char *s)
 
 	for (i = 0; i < n; i++)
 	{
-		if (s[0] == '-')
-			sign = -1;
-		if(sign == -1)
+		if(s[0] == '-')
 		{
 			 num = num * 10 + (s[i] - 48);
 			 num *= -1;
