@@ -11,14 +11,15 @@ int _atoi(char *s)
 	int n = strlen(s);
 	int i = 0;
 	int sign = 1;
-	if (s[0] == '-')
-	{
-		sign = -1;
-		i++;
-	}
+
 	for (i = 0; i < n; i++)
 	{
-		num = num * 10 + (s[i] - 48);
+		if (s[0] == '-')
+			sign = -1;
+		if ( sign > 0)
+			num = num * 10 + (s[i] - 48);
+		else
+			num = (-num * 10 + (s[i] - 48));
 	}
-	return (num * sign);
+	return (num);
 }
