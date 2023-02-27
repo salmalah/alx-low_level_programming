@@ -9,14 +9,14 @@ int _atoi(char *s)
 {
 	unsigned int num = 0;
 	int n = strlen(s);
-	int i;
+	int i = 0;
 	int sign = 1;
 	if (s[0] == '-')
 	{
 		sign = -1;
 		i++;
 	}
-	for (i = 0; i < n; i++)
+	for (i; i < n; i++)
 	{
 		num = num * 10 + (s[i] - 48);
 	}
