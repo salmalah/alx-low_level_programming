@@ -17,6 +17,6 @@ char *_strcat(char *dest, char *src)
 	{
 		dest = src[i];
 	}
-	copu += dest;
+	copy += dest;
 	return (copy);
 }
