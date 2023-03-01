@@ -8,6 +8,15 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	dest = strcat(dest, src);
-	return (dest);
+	char *copy = dest;
+	int i;
+	int len;
+
+	len = strlen(src);
+	for (i = 0; i < len; i++)
+	{
+		dest = src[i];
+	}
+	copu += dest;
+	return (copy);
 }
