@@ -3,7 +3,7 @@
  * _strchr - a function that locates a character in a string
  * @s: an input string to search in
  * @c: an input character to locate into string s
- * Return: returns pointer to c position
+ * Return: the pointer to the first occurrence of the character c.
  */
 char *_strchr(char *s, char c)
 {
@@ -13,5 +13,7 @@ char *_strchr(char *s, char c)
 			return (s);
 		s++;
 	}
+	if if (*s == c)
+		return(s);
 	return (NULL);
 }
