@@ -8,14 +8,25 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int count;
+	bool found;
 
 	count = 0;
 	while (*s != '\0')
 	{
-		if (accept == s)
-			break;
-		count++;
+		found = false;
+		while (accept != '\0')
+		{
+			if (accept == s)
+			{
+				found = true;
+				break;
+				count++;
+			}
+			accept++;
+		}
 		s++;
+		if (found == true)
+			break;
 	}
 	return (count);
 }
