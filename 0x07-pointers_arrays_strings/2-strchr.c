@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * _strchr - a function that locates a character in a string
  * @s: an input string to search in
@@ -8,15 +7,13 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i;
-	int len;
-
-	len = strlen(s);
-	for (i = 0; i < len; i++)
-	{
-		if(s[i] == c)
-			return (s[i]);
-		else 
-			return ('\0');
-	}
+        while (*s != '\0')
+        {
+                if (c == *s)
+                        return (s);
+                s++;
+        }
+        if (c == *s)
+                return (s);
+        return ('\0');
 }
