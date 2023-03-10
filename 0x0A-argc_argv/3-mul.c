@@ -7,11 +7,14 @@
  */
 int main(int argc, char *argv[])
 {
+	int N1 , N2, result;
+
 	if (argc != 2)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
-	printf("%s\n", (argv[1] * argv[2]));
+	result = argv[1] * argv[2];
+	printf("%d\n", result);
 	return (0);
 }
