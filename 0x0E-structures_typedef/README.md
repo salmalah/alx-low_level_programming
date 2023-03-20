@@ -1,5 +1,5 @@
 # 0x0E. C - Structures, typedef
-![img](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2021/3/50af78a28a081e809856d4cdbde2d7ca9d4aa93d.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230320%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230320T170224Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0ef8241e4b05c8c32fcf3ef1d48490bc98d7944a948daa0ca1f11b3dcc070c4c)
+![img](https://media.licdn.com/dms/image/C4D22AQG9tP6L8bRIhw/feedshare-shrink_800/0/1665421957263?e=2147483647&v=beta&t=Ah0-3N0XTx5S0_kaGKi6oPJhQoP8_owO8mzBgXs-TOM)
 ## Resources
 ### Read or watch:
 * [0x0d. Structures.pdf](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/misc/2021/1/6eb80c79c99f6125450a0dc11b300d46238d1a5a.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230320%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230320T170643Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f18cebcda3c028a046c671f458d3cabf8ef53697461a9d0c145763f71886638d)
