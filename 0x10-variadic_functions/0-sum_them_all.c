@@ -8,11 +8,11 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
-	var_list list;
+	va_list list;
 
 	if (n == 0)
 		return (0);
-	var_start(list, n);
+	va_start(list, n);
 	unsigned int i;
 	int sum = 0;
 
