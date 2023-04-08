@@ -6,8 +6,8 @@
  */
 int get_endianness(void)
 {
-	int x = 1;
-	char *b_ptr = (char*)&x;
+	int x = 0x01;
+	char *b_ptr = (char *)&x;
 
 	if (*b_ptr == 1)
 	{
