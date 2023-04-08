@@ -19,7 +19,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			f += k;
 		}
-		k = k * 2;
+		k *= 2;
 	}
 	return (f);
 }
