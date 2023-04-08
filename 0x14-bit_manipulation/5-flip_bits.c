@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * flip_bits - function that returns the number of bits 
+ * flip_bits - function that returns the number of bits
  * @n: input number
  * @m: second input number
- * Return: number of 
+ * Return: number of
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
