@@ -8,9 +8,9 @@
 
 int close_file(int);
 /**
- * main - Main function to copy files
- * @argc: The number of passed arguments
- * @argv: The pointers to array arguments
+ * main - a main function
+ * @argc: arguments passed
+ * @argv: pointers to array
  * Return: 1 on success, exits on failure
  */
 int main(int argc, char *argv[])
