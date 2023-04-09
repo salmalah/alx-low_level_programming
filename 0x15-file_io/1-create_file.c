@@ -11,9 +11,8 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int lent = 0, in_lent = 0;
+	int lent = 0, fl, in_lent = 0;
 	char *pt;
-	int fl;
 
 	if (filename == NULL)
 		return (-1);
@@ -28,7 +27,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		for (in_lent = 0, pt = text_content; *pt; pt++)
 			in_lent++;
-		length = write(fl, text_content, in_lent);
+		lent = write(fl, text_content, in_lent);
 	}
 
 	if (close(fl) == -1 || in_lent != lent)
