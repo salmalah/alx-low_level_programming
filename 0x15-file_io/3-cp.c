@@ -16,7 +16,7 @@ int close_file(int);
 int main(int argc, char *argv[])
 {
 	int bytes_r = 0, _EOF = 1, from_fl = -1, to_fl = -1, err_or = 0;
-         char buff[1024];
+	char buff[1024];
 
 	if (argc != 3)
 	{
@@ -74,9 +74,9 @@ int main(int argc, char *argv[])
 }
 
 /**
- * close_file - A function closes a file 
+ * close_file - A function closes a file
  * @des_error: Description error for closed file
- * Return: 1 on successful else -1 
+ * Return: 1 on successful else -1
  */
 int close_file(int des_error)
 {
