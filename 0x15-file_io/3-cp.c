@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 			break;
 		bytes_r += _EOF;
 		err_or = write(to_fl, buff, _EOF);
-		if (error < 0)
+		if (err_or < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close_file(from_fl);
