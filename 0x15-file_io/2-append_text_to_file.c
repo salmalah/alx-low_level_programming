@@ -12,27 +12,31 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fdo, fdw, len = 0;
+	int flo, fl_write, lent = 0;
 
 	if (filename == NULL)
+	{
 		return (-1);
+	}
 
-	fdo = open(filename, O_RDWR | O_APPEND);
-	if (fdo < 0)
+	flo = open(filename, O_RDWR | O_APPEND);
+	if (fdlo < 0)
 		return (-1);
 	if (text_content == NULL)
 	{
-		close(fdo);
+		close(flo);
 		return (1);
 	}
 
-	while (*(text_content + len))
-		len++;
+	while (*(text_content + lent))
+		lent++;
 
-	fdw = write(fdo, text_content, len);
-	close(fdo);
-	if (fdw < 0)
+	fl_write = write(flo, text_content, lent);
+	close(flo);
+	if (fl_write < 0)
+	{
 		return (-1);
+	}
 
 	return (1);
 }
