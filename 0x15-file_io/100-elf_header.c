@@ -91,7 +91,7 @@ void printd_ata(unsigned char *e_ident)
 		case ELFDATANONE:
 			printf("none\n");
 			break;
-		case ELFDATA2:
+		case ELFDATA2LSB:
 			printf("2's complement, little endian\n");
 			break;
 		case ELFDATA2MSB:
@@ -212,7 +212,7 @@ void printty_ype(unsigned int x_type, unsigned char *e_ident)
 void printE_ntry(unsigned long int y_entry, unsigned char *e_ident)
 {
 	printf("  Entry point address:               ");
-	if (y_ident[EI_DATA] == ELFDATA2MSB)
+	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
 		y_entry = ((y_entry << 8) & 0xFF00FF00) | ((y_entry >> 8) & 0xFF00FF);
 		y_entry = (y_entry << 16) | (y_entry >> 16);
@@ -251,7 +251,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	int file, buff;
 
 	file = open(argv[1], O_RDONLY);
-	if (f == -1)
+	if (file == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
@@ -259,11 +259,11 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	head = malloc(sizeof(Elf64_Ehdr));
 	if (head == NULL)
 	{
-		close_elf(file);
+		close_elff(file);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-	buff = read(file, header, sizeof(Elf64_Ehdr));
+	buff = read(file, head, sizeof(Elf64_Ehdr));
 	if (buff == -1)
 	{
 		free(header);
@@ -279,8 +279,8 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	printv_ersiion(head->e_ident);
 	print_osabii(head->e_ident);
 	print_abii(head->e_ident);
-	printty_ype(head->x_type, head->e_ident);
-	printE_ntry(head->y_entry, head->e_ident);
+	printty_ype(head->e_type, head->e_ident);
+	printE_ntry(head->e_entry, head->e_ident);
 	free(head);
 	close_elff(file);
 	return (0);
