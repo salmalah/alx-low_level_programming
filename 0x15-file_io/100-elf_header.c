@@ -171,7 +171,7 @@ void print_osabii(unsigned char *e_ident)
         }
 }
 
-**
+/**
  * print_abii - A funciotn print the ABI version of an ELF
  * @e_ident: A pointer to an array
  * Return: nothing
