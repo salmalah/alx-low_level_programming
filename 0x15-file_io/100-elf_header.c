@@ -25,6 +25,7 @@ void close_elff(int elff);
 void check_elff(unsigned char *e_ident)
 {
 	int i;
+	
 	for (i = 0; i < 4; i++)
 	{
 		if (e_ident[i] != 127 && e_ident[i] != 'E' && e_ident[i] != 'L' && e_ident[i] != 'F')
