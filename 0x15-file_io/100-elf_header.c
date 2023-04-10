@@ -226,7 +226,7 @@ void printE_ntry(unsigned long int y_entry, unsigned char *e_ident)
 		printf("%#lx\n", y_entry);
 	}
 }
-/** 
+/**
  * close_elff - A function close an ELF file
  * @elff: The file descriptor of the ELF file
  * Return: nothinf
