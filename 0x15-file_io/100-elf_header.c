@@ -266,8 +266,8 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	buff = read(file, head, sizeof(Elf64_Ehdr));
 	if (buff == -1)
 	{
-		free(header);
-		close_elf(file);
+		free(head);
+		close_elff(file);
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
