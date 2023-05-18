@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
  * print_dlistint - Check description
  * Description: is a function Prints all the elements of a dlistint_t list.
  * @h: the head of dlistint_t list
