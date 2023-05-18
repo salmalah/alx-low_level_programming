@@ -27,7 +27,7 @@ Please use this data structure for this project:
  * @next: points to the next node
  *
  * Description: doubly linked list node structure
- * 
+ *
  */
 typedef struct dlistint_s
 {
