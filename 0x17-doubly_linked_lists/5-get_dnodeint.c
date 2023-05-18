@@ -7,15 +7,15 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-        unsigned int count = 0;
-        dlistint_t *new_l = head;
+	unsigned int count = 0;
+	dlistint_t *new_l = head;
 
-        while (new_l)
-        {
+	while (new_l)
+	{
 		if (count == index)
-			return new_l;
-                new_l = (*new_l).next;
-                count++;
-        }
-        return (NULL);
+			return (new_l);
+		new_l = (*new_l).next;
+		count++;
+	}
+	return (NULL);
 }
