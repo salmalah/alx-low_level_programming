@@ -1,2 +1,2 @@
 #!/bin/bash
-export LD_PRELOAD=./lib.so
+export LD_PRELOAD=$PWD/lib.so
