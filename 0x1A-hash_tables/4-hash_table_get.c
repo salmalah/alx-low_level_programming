@@ -24,5 +24,5 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (n == NULL)
 		return (NULL);
 	else
-		return n->value;
+		return (n->value);
 }
