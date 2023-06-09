@@ -33,15 +33,14 @@ shash_table_t *shash_table_create(unsigned long int size)
 		return (NULL);
 	st->size = size;
 	st->array = malloc(sizeof(shash_node_t *) * size);
-	st->shead = NULL;
-	st->stail = NULL;
 	if (st->array == NULL)
 	{
-		free(st);
 		return (NULL);
 	}
 	for (index = 0; index < size; index++)
 		st->array[index] = NULL;
+	st->shead = NULL;
+	st->stail = NULL;
 	return (st);
 }
 /**
