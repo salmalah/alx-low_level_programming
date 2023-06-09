@@ -50,20 +50,18 @@ shash_table_t *shash_table_create(unsigned long int size)
  */
 void shash_table_print(const shash_table_t *ht)
 {
-	int fr = 1;
 	shash_node_t *no;
 
 	if (ht == NULL)
 		return;
-	printf("{");
 	no = ht->shead;
+	printf("{");
 	while (no != NULL)
 	{
-		if (!fr)
-			printf(", ");
 		printf("'%s': '%s'", no->key, no->value);
-		fr = 0;
 		no = no->snext;
+		if (no != NULL)
+			printf(", ");
 	}
 	printf("}\n");
 }
