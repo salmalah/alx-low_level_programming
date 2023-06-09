@@ -73,22 +73,21 @@ void shash_table_print(const shash_table_t *ht)
 void shash_table_delete(shash_table_t *ht)
 {
 	shash_node_t *nod, *tp;
-	unsigned long int in;
+	shash_table_t *h = ht;
 
-	for (in = 0; in < ht->size; in++)
+	if (ht == NULL)
+		return;
+	nod = ht->shead;
+	while (nod)
 	{
-		nod = ht->array[in];
-		while (nod != NULL)
-		{
-			tp = nod->next;
-			free(nod->key);
-			free(nod->value);
-			free(nod);
-			nod = tp;
-		}
+		tp = nod->snext;
+		free(nod->key);
+		free(nod->value);
+		free(nod);
+		nod = tp;
 	}
-	free(ht->array);
-	free(ht);
+	free(h->array);
+	free(h);
 }
 /**
  * shash_table_print_rev - A Function prints shash table in reverse
