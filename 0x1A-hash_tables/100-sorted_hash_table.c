@@ -1,10 +1,10 @@
 #include "hash_tables.h"
-shash_table_t *shash_table_create(unsigned long int size);
-int shash_table_set(shash_table_t *ht, const char *key, const char *value);
 char *shash_table_get(const shash_table_t *ht, const char *key);
+shash_table_t *shash_table_create(unsigned long int size);
 void shash_table_print(const shash_table_t *ht);
-void shash_table_print_rev(const shash_table_t *ht);
 void shash_table_delete(shash_table_t *ht);
+void shash_table_print_rev(const shash_table_t *ht);
+int shash_table_set(shash_table_t *ht, const char *key, const char *value);
 /**
  * shash_table_get - a function get value with key from hash table
  * @key: the key
@@ -16,11 +16,11 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	unsigned long int j;
 
 	j = key_index((const unsigned char *)key, ht->size);
-	n = ht->shead;
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
 	if (j >= ht->size)
 		return (NULL);
+	n = ht->shead;
 	while (n != NULL && strcmp(n->key, key) != 0)
 		n = n->snext;
 	return ((n == NULL) ? NULL : n->value);
@@ -33,7 +33,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 shash_table_t *shash_table_create(unsigned long int size)
 {
 	shash_table_t *st = malloc(sizeof(shash_table_t));
-	unsigned long int index;
+	unsigned long int in;
 
 	if (st == NULL)
 		return (NULL);
@@ -43,8 +43,8 @@ shash_table_t *shash_table_create(unsigned long int size)
 	{
 		return (NULL);
 	}
-	for (index = 0; index < size; index++)
-		st->array[index] = NULL;
+	for (in = 0; in < size; in++)
+		st->array[in] = NULL;
 	st->shead = NULL;
 	st->stail = NULL;
 	return (st);
