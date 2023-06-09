@@ -10,18 +10,14 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	unsigned long int j;
 
 	j = key_index((const unsigned char *)key, ht->size);
-	n = ht->array[j];
+	n = ht->shead;
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
 	if (j >= ht->size)
 		return (NULL);
-	while (n != NULL)
-	{
-		if (strcmp(n->key, key) == 0)
-			return (n->value);
-		n = n->next;
-	}
-	return (NULL);
+	while (n != NULL && strcmp(n->key, key) != 0)
+		n = n->snext;
+	return ((n == NULL) ? NULL : n->value);
 }
 /**
  * shash_table_create - A function create a sorted hash table
