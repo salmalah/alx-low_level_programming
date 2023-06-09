@@ -125,73 +125,73 @@ void shash_table_print_rev(const shash_table_t *ht)
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
-	shash_node_t *new, *tmp;
-	char *value_copy;
+	shash_node_t *new_n, *tm;
+	char *value_c;
 	unsigned long int index;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
-	value_copy = strdup(value);
-	if (value_copy == NULL)
+	value_c = strdup(value);
+	if (value_c == NULL)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	tmp = ht->shead;
-	while (tmp)
+	tm = ht->shead;
+	while (tm)
 	{
-		if (strcmp(tmp->key, key) == 0)
+		if (strcmp(tm->key, key) == 0)
 		{
-			free(tmp->value);
-			tmp->value = value_copy;
+			free(tm->value);
+			tm->value = value_c;
 			return (1);
 		}
-		tmp = tmp->snext;
+		tm = tm->snext;
 	}
 
-	new = malloc(sizeof(shash_node_t));
-	if (new == NULL)
+	new_n = malloc(sizeof(shash_node_t));
+	if (new_n == NULL)
 	{
-		free(value_copy);
+		free(value_c);
 		return (0);
 	}
-	new->key = strdup(key);
-	if (new->key == NULL)
+	new_n->key = strdup(key);
+	if (new_n->key == NULL)
 	{
-		free(value_copy);
-		free(new);
+		free(value_c);
+		free(new_n);
 		return (0);
 	}
-	new->value = value_copy;
-	new->next = ht->array[index];
-	ht->array[index] = new;
+	new_n->value = value_c;
+	new_n->next = ht->array[index];
+	ht->array[index] = new_n;
 
 	if (ht->shead == NULL)
 	{
-		new->sprev = NULL;
-		new->snext = NULL;
-		ht->shead = new;
-		ht->stail = new;
+		new_n->sprev = NULL;
+		new_n->snext = NULL;
+		ht->shead = new_n;
+		ht->stail = new_n;
 	}
 	else if (strcmp(ht->shead->key, key) > 0)
 	{
-		new->sprev = NULL;
-		new->snext = ht->shead;
-		ht->shead->sprev = new;
-		ht->shead = new;
+		new_n->sprev = NULL;
+		new_n->snext = ht->shead;
+		ht->shead->sprev = new_n;
+		ht->shead = new_n;
 	}
 	else
 	{
-		tmp = ht->shead;
-		while (tmp->snext != NULL && strcmp(tmp->snext->key, key) < 0)
-			tmp = tmp->snext;
-		new->sprev = tmp;
-		new->snext = tmp->snext;
-		if (tmp->snext == NULL)
-			ht->stail = new;
+		tm = ht->shead;
+		while (tm->snext != NULL && strcmp(tm->snext->key, key) < 0)
+			tm = tm->snext;
+		new_n->sprev = tm;
+		new_n->snext = tm->snext;
+		if (tm->snext == NULL)
+			ht->stail = new_n;
 		else
-			tmp->snext->sprev = new;
-		tmp->snext = new;
+			tm->snext->sprev = new_n;
+		tm->snext = new_n;
 	}
 
 	return (1);
