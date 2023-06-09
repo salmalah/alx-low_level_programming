@@ -1,12 +1,30 @@
 #include "hash_tables.h"
-
-shash_table_t *shash_table_create(unsigned long int size);
-int shash_table_set(shash_table_t *ht, const char *key, const char *value);
 char *shash_table_get(const shash_table_t *ht, const char *key);
+shash_table_t *shash_table_create(unsigned long int size);
 void shash_table_print(const shash_table_t *ht);
-void shash_table_print_rev(const shash_table_t *ht);
 void shash_table_delete(shash_table_t *ht);
+void shash_table_print_rev(const shash_table_t *ht);
+int shash_table_set(shash_table_t *ht, const char *key, const char *value);
+/**
+ * shash_table_get - a function get value with key from hash table
+ * @key: the key
+ * Return: the value associated with key or NULL
+ */
+char *shash_table_get(const shash_table_t *ht, const char *key)
+{
+	shash_node_t *n;
+	unsigned long int index;
 
+	index = key_index((const unsigned char *)key, ht->size);
+	if (ht == NULL || key == NULL || *key == '\0')
+		return (NULL);
+	if (index >= ht->size)
+		return (NULL);
+	n = ht->shead;
+	while (n != NULL && strcmp(n->key, key) != 0)
+		n = n->snext;
+	return ((n == NULL) ? NULL : n->value);
+}
 /**
  * shash_table_create - A function create a sorted hash table
  * @size: The size of shash table
@@ -30,6 +48,74 @@ shash_table_t *shash_table_create(unsigned long int size)
 	st->shead = NULL;
 	st->stail = NULL;
 	return (st);
+}
+/**
+ * shash_table_print - A function print shash table in order
+ * @ht: pointer to the shash table
+ * Return: nothing
+ */
+void shash_table_print(const shash_table_t *ht)
+{
+	shash_node_t *no;
+
+	if (ht == NULL)
+		return;
+	no = ht->shead;
+	printf("{");
+	while (no != NULL)
+	{
+		printf("'%s': '%s'", no->key, no->value);
+		no = no->snext;
+		if (no != NULL)
+			printf(", ");
+	}
+	printf("}\n");
+}
+/**
+ * shash_table_delete - A function delete a sorted shash table
+ * @ht: pointer to the table
+ * Return: nothing
+ */
+void shash_table_delete(shash_table_t *ht)
+{
+	shash_node_t *nod, *tp;
+	shash_table_t *h = ht;
+
+	if (ht == NULL)
+		return;
+	nod = ht->shead;
+	while (nod)
+	{
+		tp = nod->snext;
+		free(nod->key);
+		free(nod->value);
+		free(nod);
+		nod = tp;
+	}
+	free(h->array);
+	free(h);
+}
+/**
+ * shash_table_print_rev - A Function prints shash table in reverse
+ * @ht: ointer to the table
+ * Return: nothing
+ */
+void shash_table_print_rev(const shash_table_t *ht)
+{
+	shash_node_t *n;
+
+	if (ht == NULL)
+		return;
+	n = ht->stail;
+	printf("{");
+	while (n != NULL)
+	{
+		printf("'%s': '%s'", n->key, n->value);
+		n = n->sprev;
+		if (n != NULL)
+			printf(", ");
+	}
+	printf("}\n");
 }
 /**
  * shash_table_set - A function add element to shash table
@@ -110,92 +196,4 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	}
 
 	return (1);
-}
-/**
- * shash_table_get - a function get value with key from hash table
- * @key: the key
- * Return: the value associated with key or NULL
- */
-char *shash_table_get(const shash_table_t *ht, const char *key)
-{
-	shash_node_t *n;
-	unsigned long int j;
-
-	j = key_index((const unsigned char *)key, ht->size);
-	if (ht == NULL || key == NULL || *key == '\0')
-		return (NULL);
-	if (j >= ht->size)
-		return (NULL);
-	n = ht->shead;
-	while (n != NULL && strcmp(n->key, key) != 0)
-		n = n->snext;
-	return ((n == NULL) ? NULL : n->value);
-}
-/**
- * shash_table_print - A function print shash table in order
- * @ht: pointer to the shash table
- * Return: nothing
- */
-void shash_table_print(const shash_table_t *ht)
-{
-	shash_node_t *no;
-
-	if (ht == NULL)
-		return;
-	no = ht->shead;
-	printf("{");
-	while (no != NULL)
-	{
-		printf("'%s': '%s'", no->key, no->value);
-		no = no->snext;
-		if (no != NULL)
-			printf(", ");
-	}
-	printf("}\n");
-}
-/**
- * shash_table_print_rev - A Function prints shash table in reverse
- * @ht: ointer to the table
- * Return: nothing
- */
-void shash_table_print_rev(const shash_table_t *ht)
-{
-	shash_node_t *n;
-
-	if (ht == NULL)
-		return;
-	n = ht->stail;
-	printf("{");
-	while (n != NULL)
-	{
-		printf("'%s': '%s'", n->key, n->value);
-		n = n->sprev;
-		if (n != NULL)
-			printf(", ");
-	}
-	printf("}\n");
-}
-/**
- * shash_table_delete - A function delete a sorted shash table
- * @ht: pointer to the table
- * Return: nothing
- */
-void shash_table_delete(shash_table_t *ht)
-{
-	shash_node_t *nod, *tp;
-	shash_table_t *h = ht;
-
-	if (ht == NULL)
-		return;
-	nod = ht->shead;
-	while (nod)
-	{
-		tp = nod->snext;
-		free(nod->key);
-		free(nod->value);
-		free(nod);
-		nod = tp;
-	}
-	free(h->array);
-	free(h);
 }
