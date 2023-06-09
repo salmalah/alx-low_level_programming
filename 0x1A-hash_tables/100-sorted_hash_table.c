@@ -96,20 +96,18 @@ void shash_table_delete(shash_table_t *ht)
  */
 void shash_table_print_rev(const shash_table_t *ht)
 {
-	int ft = 1;
 	shash_node_t *n;
 
 	if (ht == NULL)
 		return;
-	printf("{");
 	n = ht->stail;
+	printf("{");
 	while (n != NULL)
 	{
-		if (!ft)
-			printf(", ");
 		printf("'%s': '%s'", n->key, n->value);
-		ft = 0;
 		n = n->sprev;
+		if (n != NULL)
+			printf(", ");
 	}
 	printf("}\n");
 }
