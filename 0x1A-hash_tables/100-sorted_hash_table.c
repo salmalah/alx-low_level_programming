@@ -8,7 +8,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value);
 /**
  * shash_table_get - a function get value with key from hash table
  * @key: the key
- * @ht: pointer th table
+ * @ht: pointer th table shash table
  * Return: the value associated with key or NULL
  */
 char *shash_table_get(const shash_table_t *ht, const char *key)
@@ -29,6 +29,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 /**
  * shash_table_create - A function that create a sorted hash table
  * @size: The size of shash table
+ * Description: A function that create a sorted hash table
  * Retunr: NULL or pointer to the sorted table
  */
 shash_table_t *shash_table_create(unsigned long int size)
