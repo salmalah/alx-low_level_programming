@@ -14,7 +14,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	for (n = jum = list; jum->next != NULL && jum->n < value;)
 	{
 		n = jum;
-		if (jum->expres)
+		if (jum->express)
 		{
 			jum = jum->express;
 			printf("Value checked at index [%ld] = [%d]\n",
